@@ -1,7 +1,7 @@
 import React from "react";
 import "./DesktopMobileView.css";
 
-const DesktopMobileView = ({ textMarkdown, title = { title } }) => {
+const DesktopMobileView = ({ textMarkdown, title }) => {
   return (
     <div class="marvel-device iphone-x">
       <div class="notch">
