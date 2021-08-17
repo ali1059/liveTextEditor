@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import MobileView from "./components/MobileView/MobileView";
+import { EditorState, convertToRaw } from "draft-js";
 
-function App() {
+import "./App.css";
+import TextEditor from "./components/TextEditor/TextEditor";
+
+const App = () => {
+  const [textMarkdown, setTextMarkdown] = useState("");
+  console.log(
+    "textMarkdown =>>>>>>>>>>>>>>>>>",
+    textMarkdown,
+    typeof textMarkdown
+  );
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App-container">
+      <div className="texteditor-container">
+        <TextEditor setTextMarkdown={setTextMarkdown} />
+      </div>
+      <div className="mobile-container">
+        <MobileView textMarkdown={textMarkdown} />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
