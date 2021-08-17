@@ -9,8 +9,9 @@
 
 .texteditor-container {
   padding: 10rem 5rem;
-  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .mobile-container {
@@ -19,12 +20,40 @@
   justify-content: center;
 }
 
+.submit-btn {
+  margin: 1rem 0;
+  padding: 0.7rem 2rem;
+  background-color: #418dcb;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.button-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.title-text {
+  width: 100%;
+  font-size: 18px;
+  background-color: #efefef;
+  border: none;
+  padding: 1rem;
+}
+
 @media screen and (max-width: 768px) {
   .App-container {
     grid-template-columns: 1fr;
+    background-color: #d6ecf8;
   }
 
   .texteditor-container {
     padding: 5rem 2.5rem;
+    order: 2;
+  }
+
+  .mobile-container {
+    order: 1;
   }
 }

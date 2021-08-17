@@ -2,6 +2,8 @@
 }
 
 .demo-editor {
-  border: 2px solid gray;
+  height: 200px;
+  border: 2px solid #efefef;
   padding: 1rem 0;
+  background: white;
 }
