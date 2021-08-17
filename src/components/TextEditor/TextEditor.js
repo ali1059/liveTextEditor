@@ -11,7 +11,6 @@ const TextEditor = ({ setTextMarkdown }) => {
   });
 
   const onEditorStateChange = (editorState) => {
-    console.log("editorState =>>>>>>>>>>>>", editorState.getCurrentContent());
     setTextMarkdown(draftToHtml(convertToRaw(editorState.getCurrentContent())));
 
     setState({

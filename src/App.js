@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import MobileView from "./components/MobileView/MobileView";
-import { EditorState, convertToRaw } from "draft-js";
-
 import "./App.css";
 import TextEditor from "./components/TextEditor/TextEditor";
+import MobileView from "./components/MobileView/MobileView";
 
 const App = () => {
   const [textMarkdown, setTextMarkdown] = useState("");
